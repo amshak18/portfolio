@@ -1,0 +1,905 @@
+/*including padding and border for all pages*/
+* {
+    box-sizing: border-box;
+    font-family: 'calibri', sans-serif;
+    font-size: 17px;
+}
+
+/*defining custom class to align content in all pages*/
+.container {
+    margin-left: 5em;
+    margin-right: 5em;
+    /* margin-bottom: 15em;*/
+}
+
+/*start of style for the HEADER block in all pages*/
+header > nav {
+    background-color: #cce5ff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+/*style for header title in header block*/
+#myname {
+    all: unset;
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+    text-shadow: 2px 2px 5px dimgrey;
+    cursor: pointer;
+}
+
+/*style for unordered list of links in header block*/
+header > nav > ul {
+    list-style-type: none;
+    /*width: max-content;
+    text-align: left;*/
+}
+
+header > nav > ul > li {
+    display: inline-block;
+}
+
+#header-menu {
+    display: none;
+}
+
+.header-collapsable-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*defining custom class to align the unordered list */
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+/*style for links in header*/
+header > nav > ul > li > span > a, #calculator {
+    all: unset;
+    padding: 8px 10px;
+    font-family: 'Sora', sans-serif;
+    text-shadow: 2px 2px 5px dimgrey;
+}
+
+
+/*style for hover element in header*/
+header > nav > ul > li > span > a:hover, #calculator:hover {
+    background-color: #d3c2ff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/*end of styling for HEADER block*/
+
+/*start of style for the FOOTER block*/
+footer {
+    background-color: #d3c2ff;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    border-radius: 5px;
+    height: 100%;
+}
+
+/*defining custom class for placement of icons in footer*/
+.grid-footer {
+    display: grid;
+    grid-template-areas:
+            'linkedin github gmail facebook instagram contact';
+    column-gap: 25px;
+    row-gap: 0;
+    justify-items: center;
+    justify-content: space-around;
+}
+
+.grid-footer.linkedin {
+    grid-area: linkedin;
+    align-items: center;
+}
+
+.grid-footer.github {
+    grid-area: github;
+    align-items: center;
+}
+
+.grid-footer.gmail {
+    grid-area: gmail;
+    align-items: center;
+}
+
+.grid-footer.facebook {
+    grid-area: facebook;
+    align-items: center;
+}
+
+.grid-footer.instagram {
+    grid-area: instagram;
+    align-items: center;
+}
+
+.grid-footer.contact {
+    grid-area: contact;
+    align-items: center;
+    text-align: center;
+}
+
+/*end of styling for FOOTER block*/
+
+/*start of generic styling for sections */
+section {
+    padding: 20px;
+}
+
+section > section > h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    text-shadow: 2px 2px 5px dimgrey;
+    text-align: center;
+}
+
+section > article > p {
+    font-family: 'calibri', sans-serif;
+    font-size: 17px;
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+section > picture > img {
+    width: 300px;
+    height: 300px;
+}
+
+/*end of generic styling for sections in all pages*/
+
+/*defining custom class for placement of body content in Index.html*/
+#index-body {
+    margin-bottom: 16em;
+}
+
+.index-grid-body {
+    display: grid;
+    grid-template-areas:
+            'aboutme aboutme aboutme aboutme'
+            'pic pic content1 content1'
+            'pic pic content2 content2'
+            'resume resume resume resume';
+    column-gap: 5px;
+    row-gap: 0;
+    justify-content: space-around;
+}
+
+.index-grid-body-aboutme {
+    grid-area: aboutme;
+    text-align: center;
+}
+
+.index-grid-body-pic {
+    grid-area: pic;
+    align-items: center;
+}
+
+.index-grid-body-content1 {
+    grid-area: content1;
+    text-align: justify;
+}
+
+.index-grid-body-content2 {
+    grid-area: content2;
+    text-align: justify;
+}
+
+.index-grid-body-resume {
+    grid-area: resume;
+    text-align: center;
+}
+
+
+/*styling table in Bio.html*/
+table, th, td {
+    font-family: 'calibri', sans-serif;
+    font-size: 17px;
+    border: 2px solid;
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    height: 30px;
+    text-align: center;
+    padding: 10px;
+    /*border-bottom: 1px solid #ddd;*/
+}
+
+th {
+    background-color: #e5f8ff;
+    text-shadow: 2px 2px 5px dimgrey;
+}
+
+tr:nth-child(odd) {
+    background-color: lightgray;
+}
+
+tr:hover {
+    background-color: azure;
+}
+
+.tablesyle {
+    overflow-x: auto;
+}
+
+/*styling the Education section in Bio.html*/
+.education-grid-body {
+    display: grid;
+    grid-template-areas: 'edupic edutable';
+    column-gap: 5px;
+    row-gap: 0;
+    justify-content: center;
+}
+
+.education-grid-body-edupic {
+    grid-area: edupic;
+    align-items: center;
+}
+
+.education-grid-body-edutable {
+    grid-area: edutable;
+    align-items: center;
+}
+
+/*styling the Experience section in Bio.html*/
+.grid-experience {
+    display: grid;
+    grid-template-areas: 'exp-pic exp exp exp';
+}
+
+.grid-experience-pic {
+    grid-area: exp-pic;
+    padding-top: 8em;
+}
+
+.grid-experience-details {
+    grid-area: exp;
+}
+
+#experience h2 {
+    text-align: center;
+}
+
+#professions-list {
+    list-style-type: none;
+}
+
+.pill {
+    background-color: #66cccc;
+    border: none;
+    color: black;
+    text-align: center;
+    display: inline-block;
+    border-radius: 16px;
+    padding: 5px 10px;
+    margin: 4px 2px;
+}
+
+.clients-list {
+    list-style-type: none;
+}
+
+.experience-name {
+    font-family: 'calibri', sans-serif;
+    font-size: 20px;
+}
+
+.experience-responsibilities {
+    font-family: 'calibri', sans-serif;
+}
+
+
+/*styling the Interests and Hobbies section*/
+.flex-box {
+    display: flex;
+}
+
+#tabs ul li {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    display: inline-block;
+}
+
+#tabs ul li a {
+    all: unset;
+    background-color: inherit;
+    cursor: pointer;
+    padding: 5px 100px;
+    transition: 0.3s;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#tabs ul li a:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+#tabs {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    margin-bottom: 1em;
+}
+
+#crafts {
+    margin-bottom: 5em;
+}
+
+#travelling {
+    margin-bottom: 5em;
+}
+
+#crafts picture {
+    margin: auto;
+    display: block;
+}
+
+#travelling video {
+    align-content: center;
+    margin: auto;
+    display: block;
+}
+
+#cycling {
+    margin-bottom: 2em;
+}
+
+#travelling {
+    margin-bottom: 2em;
+}
+
+#crafts {
+    margin-bottom: 2em;
+}
+
+.craft {
+    width: 250px;
+    height: 250px;
+}
+
+#livevideo {
+    height: 400px;
+    width: 400px;
+}
+
+iframe {
+    width: 560px;
+    height: 315px;
+}
+
+#cycling iframe {
+    margin: auto;
+    display: block;
+}
+
+#crafts span p {
+    font-family: 'calibri', sans-serif;
+    font-size: 17px;
+}
+
+#travelling span p {
+    font-family: 'calibri', sans-serif;
+    font-size: 17px;
+}
+
+#cycling span p {
+    font-family: 'calibri', sans-serif;
+    font-size: 17px;
+}
+
+#quilling, #travel, #cycle {
+    padding-left: 0;
+}
+
+/** image gallery slideshow **/
+.next-image, .previous-image {
+    cursor: pointer;
+}
+
+/*media queries*/
+/* media query for mobile screens*/
+@media only screen and (max-width: 600px) {
+    header > nav > ul {
+        display: none;
+    }
+
+    header > nav > ul > li {
+        display: none;
+    }
+
+    section > article > p {
+        font-size: xx-small;
+
+    }
+
+    #header-menu {
+        float: right;
+        display: block;
+    }
+
+    #menu ul, #menu ul li, #menu ul li a {
+        all: unset;
+    }
+
+    #menu ul {
+        background-color: #cce5ff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        float: right;
+        border-radius: 5px;
+        padding: 5px;
+        justify-content: space-evenly;
+        font-size: smaller;
+    }
+
+    #menu ul li span a {
+        all: unset;
+        font-family: 'Sora', sans-serif;
+        text-shadow: 2px 2px 5px dimgrey;
+    }
+
+    #menu ul li span a:hover {
+        background-color: #d3c2ff;
+        cursor: pointer;
+    }
+
+    .container {
+        margin: auto;
+    }
+
+    section > picture > img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+        height: auto;
+    }
+
+    .index-grid-body {
+        display: grid;
+        grid-template-areas:
+            'aboutme'
+            'pic'
+            'content1'
+            'content2'
+            'resume';
+        column-gap: 0;
+        row-gap: 0;
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .education-grid-body {
+        display: grid;
+        grid-template-areas:
+                'edupic'
+                'edutable';
+        column-gap: 0;
+        row-gap: 0;
+        justify-content: center;
+    }
+
+    #education-pic {
+        width: 20%;
+        height: auto;
+    }
+
+    #work {
+        display: block;
+        width: 40%;
+        height: auto;
+        margin: 0 auto;
+        padding: 0;
+
+    }
+
+    ul, li {
+        margin: 0;
+        padding: 0;
+    }
+
+    th, td, li, .pill, .experience-name, .position, .duration, #tcs-responsibilities, #accenture-responsibilities {
+        font-size: 10px;
+    }
+
+    #quilling, #crafts, #travel, #travelling, #cycle, #cycling, #interests {
+        margin: 0;
+        padding: 0;
+        font-size: 10px;
+    }
+
+    #tabs ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #tabs ul li a {
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        display: inline-block;
+        font-size: 10px;
+    }
+
+    #index-body {
+        margin-bottom: 0;
+    }
+
+    #videocontainer {
+        height: 200px;
+        width: 200px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0;
+    }
+
+    #livevideo {
+        width: 100%;
+        height: 100%;
+    }
+
+    iframe {
+        width: 40%;
+        height: auto;
+    }
+
+    /*styling the Experience section in Bio.html*/
+    .grid-experience {
+        display: grid;
+        grid-template-areas:
+                'exp-pic'
+                'exp';
+    }
+
+    .grid-experience-pic {
+        grid-area: exp-pic;
+        padding-top: 0em;
+    }
+
+    section {
+        padding: 0;
+    }
+
+    section > section > h2 {
+        font-size: 12px;
+    }
+
+    .craft {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        width: 50%;
+        height: auto;
+    }
+
+    footer {
+        margin-top: 10px;
+        padding: 10px;
+    }
+}
+
+/* media query for tablet screens*/
+@media only screen and (min-width: 1000px) {
+    .container {
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+
+    section > picture > img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .grid-section {
+        display: grid;
+        grid-template-areas:
+            'aboutme aboutme'
+            'pic content1'
+            'content2 content2';
+        column-gap: 5px;
+        row-gap: 5px;
+    }
+
+    .grid-section-image {
+        margin-top: 2em;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .grid-section-content2 {
+        margin-left: 0;
+    }
+
+    #videocontainer {
+        height: 400px;
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+    }
+
+    #livevideo {
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+/* media query for very large desktop screens*/
+@media only screen and (min-width: 4000px) {
+    .container {
+        margin-left: 25em;
+        margin-right: 25em;
+    }
+
+    header > nav > h1 {
+        font-size: 130px;
+    }
+
+    header > nav > ul > li > span > a {
+        font-size: 100px;
+        padding: 28px 40px;
+    }
+
+    section > picture > img {
+        margin-top: 25em;
+        width: 100%;
+        height: auto;
+    }
+
+    section > section > h2 {
+        font-size: 130px;
+    }
+
+    section > article > p {
+        font-size: 100px;
+    }
+
+    .grid-section {
+        display: grid;
+        grid-template-areas:
+            'aboutme aboutme'
+            'pic content1'
+            'pic content2';
+        column-gap: 5px;
+        row-gap: 5px;
+    }
+
+    footer > section > span > a > img {
+        height: 100px;
+        width: 100px;
+    }
+
+    #quilling, #travel, #cycle, #interests {
+        font-size: 100px;
+    }
+
+    #tabs ul li a {
+        all: unset;
+        background-color: inherit;
+        cursor: pointer;
+        padding: 5px 300px;
+        transition: 0.3s;
+        font-size: 100px;
+        font-weight: bold;
+    }
+
+    #crafts picture img {
+        width: 50%;
+        height: auto;
+    }
+
+    .education-grid-body {
+        display: grid;
+        grid-template-areas:
+                'edupic edutable';
+        column-gap: 0;
+        row-gap: 0;
+        justify-content: center;
+    }
+
+    #education-pic {
+        width: 100%;
+        height: auto;
+    }
+
+    #work {
+        width: 400%;
+        height: auto;
+    }
+
+    th, td, li, .pill, .experience-name, .position, .duration, #tcs-responsibilities, #accenture-responsibilities {
+        font-size: 100px;
+    }
+
+    /*styling the Experience section in Bio.html*/
+    .grid-experience {
+        display: grid;
+        grid-template-areas: 'exp-pic exp-pic exp';
+    }
+
+    .grid-experience-pic {
+        grid-area: exp-pic;
+        padding-top: 0em;
+        margin-right: 50em;
+    }
+
+    .grid-experience-details {
+        grid-area: exp;
+    }
+
+    #videocontainer {
+        height: auto;
+        width: 2000px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+    }
+
+    #livevideo {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/*media query for print version of website*/
+@media print {
+    .container {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    /*to print the website in black and white*/
+    body {
+        filter: grayscale(100%);
+    }
+
+    /*print version for index.html*/
+    header > nav {
+        border-radius: 2px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header > nav > h1 {
+        all: unset;
+        font-family: 'Anton', sans-serif;
+        font-size: 15px;
+        margin-left: 0;
+        text-shadow: none;
+    }
+
+    header > nav > ul > li > span > a {
+        all: unset;
+        padding: 1px 3px;
+        font-family: 'Sora', sans-serif;
+        font-size: 15px;
+        text-shadow: none;
+        justify-content: center;
+    }
+
+    section {
+        padding: 0;
+    }
+
+    section > section > h2 {
+        font-family: 'Lato', sans-serif;
+        font-size: 18px;
+        text-align: center;
+        text-shadow: none;
+    }
+
+    section > article > p {
+        font-family: 'calibri', sans-serif;
+        font-size: 17px;
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
+    section > picture > img {
+        width: 200px;
+        height: 200px;
+    }
+
+    #index-body {
+        margin-bottom: 12em;
+    }
+
+    .index-grid-body {
+        display: grid;
+        grid-template-areas:
+            'aboutme aboutme aboutme'
+            'pic pic pic'
+            'content1 content1 content1'
+            'content2 content2 content2';
+        column-gap: 0px;
+        row-gap: 0;
+        justify-content: space-around;
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /*end of print version of index.html*/
+    /*bio.html print version*/
+    .grid-experience {
+        display: grid;
+        grid-template-areas: 'exp-pic exp exp exp';
+    }
+
+    .grid-experience-pic {
+        grid-area: exp-pic;
+        padding-top: 0em;
+    }
+
+    .experience-name {
+        font-family: 'calibri', sans-serif;
+        font-size: 17px;
+    }
+
+    #bio-body {
+        margin-bottom: 47em;
+    }
+
+    th {
+        background-color: #e5f8ff;
+        text-shadow: none;
+    }
+
+    /*print version of Interests.html*/
+    #tabs ul li a {
+        all: unset;
+        padding: 2px 30px;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    #cycling {
+        margin-bottom: 18em;
+    }
+
+    #travelling {
+        margin-bottom: 13em;
+    }
+
+    #crafts {
+        margin-bottom: 16em;
+    }
+
+    iframe {
+        width: 560px;
+        height: 315px;
+    }
+}
+
